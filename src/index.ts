@@ -4,7 +4,7 @@ import { getRRGGBB } from './hex-color'
 import { decimalToHexString } from './radix'
 
 /**
- * adds given alpha value to a css hex color.
+ * change/add alpha(opacity) of a css hexadecimal color.
  *
  * @example
  * withAlphaHex('#ABCDEF', 0.4) // '#ABCDEF66'

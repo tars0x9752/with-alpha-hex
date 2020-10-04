@@ -7,6 +7,10 @@ A tiny TypeScript/JavaScript library which helps change/add alpha(opacity) of a 
 - written in TypeScript
 - returns a familiar hexadecimal color instead of a functional notation one.
 
+## Installation
+
+`npm i with-alpha-hex` or `yarn add with-alpha-hex`
+
 ## Helps what? / Why / When to use / Features
 
 - Dynamically manipulate the alpha channel of the css color. (with CSS-in-JS in particular)
@@ -14,9 +18,9 @@ A tiny TypeScript/JavaScript library which helps change/add alpha(opacity) of a 
 - And this library keeps css colors in hexadecimal.
   - There are plenty of color manipulation library but most of them use functional notation color(Especially when using alpha).
 
-## Installation
+## A 8-digit css hexadecimal color sample
 
-`npm i with-alpha-hex` or `yarn add with-alpha-hex`
+![alpha-sample](https://user-images.githubusercontent.com/46079709/95020082-ee288180-06a3-11eb-822c-eab34d01d5be.png)
 
 ## Usage
 
@@ -25,12 +29,15 @@ import { withAlphaHex } from 'with-alpha-hex'
 
 const textColor = '#000'
 
-const weakTextColor = withAlphaHex(textColor, 0.4)
+const weakTextColor = withAlphaHex(textColor, 0.4) // #00000066
 
-console.log(weakTextColor) // #00000066
+const primaryColor = '#14B1AB'
+
+const weakPrimaryColor = withAlphaHex(primaryColor, 0.2) // #14B1AB33
 ```
 
 ## Styled-JSX Example
+
 ```tsx
 import { withAlphaHex } from 'with-alpha-hex'
 
