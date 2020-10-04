@@ -1,7 +1,7 @@
 {
-  "name": "with-alpha",
+  "name": "with-alpha-hex",
   "version": "1.0.0",
-  "description": "with-alpha makes rgb hex color to rgba hex color.",
+  "description": "withAlphaHex adds given alpha value to a css hex color.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "files": [
@@ -10,8 +10,6 @@
   "scripts": {
     "build": "tsc",
     "watch": "tsc -w",
-    "exec": "node lib/index.js",
-    "exec:exs": "node lib/examples/basic.js",
     "format": "prettier --write src/**/*.ts",
     "lint": "eslint . --ext .ts,.tsx",
     "test": "jest --verbose"
