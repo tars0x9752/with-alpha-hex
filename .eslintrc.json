@@ -11,6 +11,7 @@
   ],
   "rules": {
     "prettier/prettier": "error",
-    "quotes": ["error", "single", { "avoidEscape": true, "allowTemplateLiterals": false }]
+    "quotes": ["error", "single", { "avoidEscape": true, "allowTemplateLiterals": false }],
+    "no-undef": "off"
   }
 }
