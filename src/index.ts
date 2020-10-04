@@ -32,10 +32,23 @@ export const validateAlpha = (alpha: number) => {
 }
 
 export const decimalToHexString = (decimal: number) => {
-  return decimal.toString(16)
+  const hex = decimal.toString(16)
+
+  if (hex === '0') {
+    return '00'
+  }
+
+  return hex
 }
 
-export const withAlpha = (colorHex: string, alpha: number, upperCase = true) => {
+/**
+ * adds given alpha value to a css color hex.
+ *
+ * @param colorHex - A css hex color string.
+ * @param alpha - Alpha value. A number between 0 and 1, where the number corresponds to 100%(full opacity).
+ * @param upperCase - Returned string to be upper case or not. defaults to be true.
+ */
+export const withAlphaHex = (colorHex: string, alpha: number, upperCase = true) => {
   const colorHexDigit = getColorHexDigit(colorHex)
 
   if (!colorHexDigit || !validateAlpha(alpha)) {
