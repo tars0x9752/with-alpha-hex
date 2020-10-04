@@ -20,14 +20,14 @@ A tiny TypeScript/JavaScript library which helps change/add alpha(opacity) of a 
 
 
 ## Styled-JSX Example
-```jsx
+```tsx
 import { withAlphaHex } from 'with-alpha-hex'
 
 // ~~~~
 
-export const RandomComponent = () => {
+const RandomComponent = () => {
   return (
-    <>
+    <div>
       <p className="random-text">{text}</p>
       <style jsx>{`
         .random-text {
@@ -39,7 +39,7 @@ export const RandomComponent = () => {
           background: ${withAlphaHex(backgroundColor, 0.2)};
         }
       `}</style>
-    </>
+    </div>
   )
 }
 ```
