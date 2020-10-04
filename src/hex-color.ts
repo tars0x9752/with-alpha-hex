@@ -25,7 +25,7 @@ export const getHexColorDigitType = (hexColor: string): HexColorDigitType | fals
   return false
 }
 
-export const format3NotationHexColor = (hexColor: string) => {
+export const format3NotationHexColor = (hexColor: string): string => {
   const splitter = /(#|([0-9a-fA-F]){1})/gi
 
   const result = hexColor.match(splitter)
@@ -34,12 +34,12 @@ export const format3NotationHexColor = (hexColor: string) => {
     return hexColor
   }
 
-  const [_, r, g, b] = result // ['#', 'r', 'g', 'b]
+  const [, r, g, b] = result // ['#', 'r', 'g', 'b]
 
   return [r, g, b].join('')
 }
 
-export const format6NotationHexColor = (hexColor: string) => {
+export const format6NotationHexColor = (hexColor: string): string => {
   const splitter = /(#|([0-9a-fA-F]){2})/gi
 
   const result = hexColor.match(splitter)
@@ -48,22 +48,24 @@ export const format6NotationHexColor = (hexColor: string) => {
     return hexColor
   }
 
-  const [_, rr, gg, bb] = result // ['#', 'rr', 'gg', 'bb']
+  const [, rr, gg, bb] = result // ['#', 'rr', 'gg', 'bb']
 
   return [rr, gg, bb].join('')
 }
 
-export const getRRGGBB = (hexColor: string) => {
+export const getRRGGBB = (hexColor: string): string => {
   const HexColorDigitType = getHexColorDigitType(hexColor)
 
-  if(!HexColorDigitType) {
-    throw new Error('Invalid hexColor. Make sure to use valid hexadecimal notation such as #RGB[A], #RRGGBB[AA].') 
+  if (!HexColorDigitType) {
+    throw new Error(
+      'Invalid hexColor. Make sure to use valid hexadecimal notation such as #RGB[A], #RRGGBB[AA].'
+    )
   }
 
   return {
-    'RGB': format3NotationHexColor(hexColor),
-    'RGBA': format3NotationHexColor(hexColor),
-    'RRGGBB': format6NotationHexColor(hexColor),
-    'RRGGBBAA': format6NotationHexColor(hexColor),
+    RGB: format3NotationHexColor(hexColor),
+    RGBA: format3NotationHexColor(hexColor),
+    RRGGBB: format6NotationHexColor(hexColor),
+    RRGGBBAA: format6NotationHexColor(hexColor),
   }[HexColorDigitType]
 }

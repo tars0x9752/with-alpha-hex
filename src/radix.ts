@@ -1,4 +1,4 @@
-export const decimalToHexString = (decimal: number) => {
+export const decimalToHexString = (decimal: number): string => {
   const hex = decimal.toString(16)
 
   if (hex === '0') {
