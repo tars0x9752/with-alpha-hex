@@ -29,7 +29,7 @@ export const getHexColorDigitType = (hexColor: string): HexColorDigitType | fals
 }
 
 /**
- * #RGB | #RGBA -> #RRGGBB
+ * #RGB | #RGBA -> RRGGBB
  */
 export const format3NotationHexColor = (hexColor: string): string => {
   const splitter = /(#|([0-9a-fA-F]){1})/gi
@@ -46,7 +46,7 @@ export const format3NotationHexColor = (hexColor: string): string => {
 }
 
 /**
- * #RRGGBB | #RRGGBBAA -> #RRGGBB
+ * #RRGGBB | #RRGGBBAA -> RRGGBB
  */
 export const format6NotationHexColor = (hexColor: string): string => {
   const splitter = /(#|([0-9a-fA-F]){2})/gi
