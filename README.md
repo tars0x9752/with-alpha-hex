@@ -16,8 +16,19 @@ A tiny TypeScript/JavaScript library which helps change/add alpha(opacity) of a 
 
 ## Installation
 
+`npm i with-alpha-hex` or `yarn add with-alpha-hex`
+
 ## Usage
 
+```ts
+import { withAlphaHex } from 'with-alpha-hex'
+
+const textColor = '#000'
+
+const weakTextColor = withAlphaHex(textColor, 0.4)
+
+console.log(weakTextColor) // #00000066
+```
 
 ## Styled-JSX Example
 ```tsx
