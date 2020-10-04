@@ -6,9 +6,12 @@ import { decimalToHexString } from './radix'
 /**
  * adds given alpha value to a css hex color.
  *
- * @param hexColor - A css hex color string.
+ * @example
+ * withAlphaHex('#ABCDEF', 0.4) // '#ABCDEF66'
+ *
+ * @param hexColor - A css hex color string. (e.g. #123, #abcdef, #FFFFFF)
  * @param alpha - Alpha value. A number between 0 and 1, where the number corresponds to 100%(full opacity).
- * @param upperCase - Returned string to be upper case or not. defaults to be true.
+ * @param upperCase - Returns in uppercase or not. defaults to be true.
  */
 export const withAlphaHex = (hexColor: string, alpha: number, upperCase = true): string => {
   if (!validateAlpha(alpha)) {
