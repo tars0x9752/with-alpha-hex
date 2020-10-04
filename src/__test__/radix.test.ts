@@ -1,4 +1,4 @@
-import { decimalToHexString } from '../decimal-to-hex'
+import { decimalToHexString } from '../radix'
 
 describe('decimalToHexString', () => {
   describe('min and max', () => {
