@@ -9,10 +9,14 @@
   ],
   "scripts": {
     "build": "tsc",
-    "watch": "tsc -w",
     "format": "prettier --write src/**/*.ts",
     "lint": "eslint . --ext .ts,.tsx",
-    "test": "jest --verbose"
+    "test": "jest --verbose",
+    "prepare" : "npm run build",
+    "prepublishOnly" : "npm test && npm run lint",
+    "preversion" : "npm run lint",
+    "version" : "npm run format && git add -A src",
+    "postversion" : "git push && git push --tags"
   },
   "devDependencies": {
     "@types/jest": "^26.0.14",
@@ -26,6 +30,10 @@
     "prettier": "^2.1.2",
     "ts-jest": "^26.4.1",
     "typescript": "^4.0.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tars0x9752/with-alpha-hex.git"
   },
   "author": "tars0x9752",
   "license": "MIT"
