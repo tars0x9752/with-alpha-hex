@@ -1,6 +1,6 @@
 {
   "name": "with-alpha-hex",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A tiny TypeScript/JavaScript library which helps change/add alpha(opacity) of a css hexadecimal color.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
