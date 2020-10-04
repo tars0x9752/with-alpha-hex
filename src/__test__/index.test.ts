@@ -1,4 +1,4 @@
-import { withAlphaHex, decimalToHexString } from '../index'
+import { withAlphaHex } from '../index'
 
 describe('withAlphaHex', () => {
   it('RRGGBB', () => {

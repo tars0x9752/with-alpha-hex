@@ -1,3 +1,5 @@
+import { decimalToHexString } from './decimal-to-hex'
+
 type ColorHexDigit = 'RGB' | 'RGBA' | 'RRGGBB' | 'RRGGBBAA'
 
 const MAX_VALUE = 255
@@ -29,16 +31,6 @@ export const getColorHexDigit = (colorHex: string): ColorHexDigit | false => {
 
 export const validateAlpha = (alpha: number) => {
   return alpha >= 0 && alpha <= 1
-}
-
-export const decimalToHexString = (decimal: number) => {
-  const hex = decimal.toString(16)
-
-  if (hex === '0') {
-    return '00'
-  }
-
-  return hex
 }
 
 /**
