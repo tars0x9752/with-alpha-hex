@@ -11,7 +11,7 @@ A tiny TypeScript/JavaScript library which helps change/add alpha(opacity) of a 
 
 This is a library for those who use CSS-in-JS and prefer to use `#RRGGBB[AA]` style css color rather than functional notation color such as `rgb()` or `hsl()` and want to make the alpha channel dynamic.
 
-There are plenty of color manipulation library but most of them output functional notation colors(Especially when using alpha).
+There are plenty of color manipulation libraries but most of them output functional notation colors(Especially when using alpha).
 
 ## 🤔 Ok, How to use then?
 
