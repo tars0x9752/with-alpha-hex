@@ -7,22 +7,27 @@ A tiny TypeScript/JavaScript library which helps change/add alpha(opacity) of a 
 - written in TypeScript
 - returns a familiar hexadecimal color instead of a functional notation one.
 
-## Installation
+## 🤨 What is this?
 
-`npm i with-alpha-hex` or `yarn add with-alpha-hex`
+This is a library for those who use CSS-in-JS and prefer to use `#RRGGBB[AA]` style css color rather than functional notation color such as `rgb()` or `hsl()` and want to make the alpha channel dynamic.
 
-## Helps what? / Why / When to use / Features
+There are plenty of color manipulation library but most of them output functional notation colors(Especially when using alpha).
 
-- Dynamically manipulate the alpha channel of the css color. (with CSS-in-JS in particular)
-  - If you're using CSS-in-JS, and want to change alpha(opacity) of a css color dynamically but the opacity CSS property doesn't work for the case, this library helps.
-- And this library keeps css colors in hexadecimal.
-  - There are plenty of color manipulation library but most of them use functional notation color(Especially when using alpha).
+## 🤔 Ok, How to use then?
 
-## A 8-digit css hexadecimal color sample
+It's fairly simple. :) A quick instruction goes below.
 
-![alpha-sample](https://user-images.githubusercontent.com/46079709/95020082-ee288180-06a3-11eb-822c-eab34d01d5be.png)
+## 💻 Installation
 
-## Usage
+```sh
+npm i with-alpha-hex
+# or
+yarn add with-alpha-hex
+```
+
+> The library is TypeScript-ready and has zero-dependency. :)
+
+## 🎈 Usage
 
 ```ts
 import { withAlphaHex } from 'with-alpha-hex'
@@ -36,7 +41,13 @@ const primaryColor = '#14B1AB'
 const weakPrimaryColor = withAlphaHex(primaryColor, 0.2) // #14B1AB33
 ```
 
-## Styled-JSX Example
+## Wait, what are those 8-digit hexadecimal color thingy?
+
+In CSS Color Module Level 4, You can use `#RRGGBBAA` color which has an alpha channel value.
+
+![sample](https://user-images.githubusercontent.com/46079709/95020082-ee288180-06a3-11eb-822c-eab34d01d5be.png)
+
+## ✨ With Styled-JSX
 
 ```tsx
 import { withAlphaHex } from 'with-alpha-hex'
