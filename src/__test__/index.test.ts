@@ -33,6 +33,25 @@ describe('withAlphaHex', () => {
     it('lowercase to lowercase', () => {
       expect(withAlphaHex('#ffffff', 0.4, false)).toBe('#ffffff66')
     })
+
+    it('0.1', () => {
+      expect(withAlphaHex('#ffffff', 0.1, false)).toBe('#ffffff1a')
+    })
+    it('0.2', () => {
+      expect(withAlphaHex('#ffffff', 0.2, false)).toBe('#ffffff33')
+    })
+    it('0.3', () => {
+      expect(withAlphaHex('#ffffff', 0.3, false)).toBe('#ffffff4d')
+    })
+    it('0.4', () => {
+      expect(withAlphaHex('#ffffff', 0.4, false)).toBe('#ffffff66')
+    })
+    it('0.5', () => {
+      expect(withAlphaHex('#ffffff', 0.5, false)).toBe('#ffffff80')
+    })
+    it('0.6', () => {
+      expect(withAlphaHex('#ffffff', 0.6, false)).toBe('#ffffff99')
+    })
   })
 
   describe('invalid hexColor', () => {

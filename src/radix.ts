@@ -1,5 +1,5 @@
 export const decimalToHexString = (decimal: number): string => {
-  const hex = decimal.toString(16)
+  const hex = Math.round(decimal).toString(16)
 
   if (hex === '0') {
     return '00'

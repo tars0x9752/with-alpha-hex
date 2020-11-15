@@ -12,20 +12,40 @@ describe('decimalToHexString', () => {
   })
 
   describe('round numbers', () => {
-    it('20% - 51 - 33', () => {
-      expect(decimalToHexString(51)).toBe('33')
+    it('10% - 255 * 0.1 - 1a', () => {
+      expect(decimalToHexString(255 * 0.1)).toBe('1a')
     })
 
-    it('40% - 102 - 66', () => {
-      expect(decimalToHexString(102)).toBe('66')
+    it('20% - 255 * 0.2 - 33', () => {
+      expect(decimalToHexString(255 * 0.2)).toBe('33')
     })
 
-    it('60% - 153 - 99', () => {
-      expect(decimalToHexString(153)).toBe('99')
+    it('30% - 255 * 0.3 - 4d', () => {
+      expect(decimalToHexString(255 * 0.3)).toBe('4d')
     })
 
-    it('80% - 204 - 99', () => {
-      expect(decimalToHexString(204)).toBe('cc')
+    it('40% - 255 * 0.4 - 66', () => {
+      expect(decimalToHexString(255 * 0.4)).toBe('66')
+    })
+
+    it('50% - 255 * 0.5 - 66', () => {
+      expect(decimalToHexString(255 * 0.5)).toBe('80')
+    })
+
+    it('60% - 255 * 0.6 - 99', () => {
+      expect(decimalToHexString(255 * 0.6)).toBe('99')
+    })
+
+    it('70% - 255 * 0.7 - 99', () => {
+      expect(decimalToHexString(255 * 0.7)).toBe('b3')
+    })
+
+    it('80% - 255 * 0.8 - 99', () => {
+      expect(decimalToHexString(255 * 0.8)).toBe('cc')
+    })
+
+    it('90% - 255 * 0.9 - 99', () => {
+      expect(decimalToHexString(255 * 0.9)).toBe('e6')
     })
   })
 
